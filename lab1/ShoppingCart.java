@@ -28,10 +28,43 @@ public class ShoppingCart {
                - add the name of the product to the pocket file.
                - print the new balance.
             */
+            Integer price = Store.getProductPrice(product);
+
+            //Thread.sleep(5000);
+            
+            if(!wallet.safeWithdraw(price)){ 
+                break;
+            }
+            
+            pocket.addProduct(product);
 
             // Just to print everything again...
             print(wallet, pocket);
             product = scan(scanner);
+
+            /*
+            Integer price = Store.getProductPrice(product);
+            int balance = wallet.getBalance();
+            if(balance - price){
+                break;
+            }
+            
+            Thread.sleep(5000);
+            wallet.setBalance(balance - price);
+            
+            pocket.addProduct(product);
+
+            // Just to print everything again...
+            print(wallet, pocket);
+            product = scan(scanner);
+            */
         }
     }
 }
+
+//två instanser, en köper en godis och den andra en bil
+//båda hamnar på rad 52
+//först den som köper bil exekverar rad 53, så blir wallet.txt 0
+//sen kör den andra som köper godis och då sätts wallet.txt till 30000 - candie
+//voila köpt bil och godis för pris av godis
+//BOOM

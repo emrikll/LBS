@@ -40,6 +40,23 @@ public class Wallet {
     }
 
     /**
+     * Sets a new balance in the wallet
+     *
+     * @param  valuetoWithdraw          The value to withdraw from the wallet
+     */
+    public boolean safeWithdraw(int valueToWithdraw) throws Exception {
+        int balance = getBalance();
+
+        
+
+        if(balance >= valueToWithdraw){
+            setBalance(balance - valueToWithdraw);
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Closes the RandomAccessFile in this.file
      */
     public void close() throws Exception {
