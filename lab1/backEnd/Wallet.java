@@ -18,6 +18,10 @@ public class Wallet {
      */
     public Wallet () throws Exception {
 	this.file = new RandomAccessFile(new File("backEnd/wallet.txt"), "rw");
+    File f = new File("./backEnd/wallet.lock");
+        if(!f.exists()) {
+            f.createNewFile();
+        }
     }
 
     /**

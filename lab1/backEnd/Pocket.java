@@ -20,6 +20,10 @@ public class Pocket {
      */
     public Pocket () throws Exception {
         this.file = new RandomAccessFile(new File("backEnd/pocket.txt"), "rw");
+        File f = new File("./backEnd/pocket.lock");
+        if(!f.exists()) {
+            f.createNewFile();
+        }
     }
 
     /**
