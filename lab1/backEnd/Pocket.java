@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.FileReader;
 import java.io.BufferedReader;
-
+import java.nio.file.*;
+import java.nio.channels.*;
 
 public class Pocket {
     /**
@@ -27,8 +28,15 @@ public class Pocket {
      * @param  product           product name to add to the pocket (e.g. "car")
      */
     public void addProduct(String product) throws Exception {
+        RandomAccessFile file = new RandomAccessFile("./backEnd/pocket.lock", "rw"); 
+        FileChannel channel = file.getChannel();
+        FileLock lock = channel.lock();
+
         this.file.seek(this.file.length());
-        this.file.writeBytes(product+'\n'); 
+        Thread.sleep(3000);
+        this.file.writeBytes(product+'\n');
+
+        lock.close();
     }
 
     /**
