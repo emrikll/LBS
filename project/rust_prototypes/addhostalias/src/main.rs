@@ -24,6 +24,9 @@ fn main() -> std::io::Result<()> {
         println!("Usage: {} ipaddress hostname alias", args[0]);
         return Ok(());
     }
-    add_alias(&args[1], &args[2], &args[3])?;
+
+    for n in range (1..101) {
+        add_alias(&args[1], &args[2], &args[3])?;
+    }
     Ok(())
 }

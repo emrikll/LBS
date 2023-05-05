@@ -36,6 +36,8 @@ int main(int argc, char *argv[]) {
     exit(EXIT_FAILURE);
   }
  
-  add_alias(argv[IPADDR], argv[HOSTNAME], argv[ALIAS]);
+  for (int i = 0; i< 100; i++) {
+    add_alias(argv[IPADDR], argv[HOSTNAME], argv[ALIAS]);
+  }
   return(0);
 }
