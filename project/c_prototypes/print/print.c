@@ -11,6 +11,59 @@ int main(int argc, char *argv[]) {
 
     char buffer[1024];
     strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+    strcpy(buffer, argv[1]);
+
     printf("You wrote: %s \n", buffer);
     exit(0);
 }

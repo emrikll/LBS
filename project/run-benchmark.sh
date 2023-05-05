@@ -1,11 +1,12 @@
 path=$1
-target=$3
 iterations=$2
+target=$3
 
 total=0
 
 cd $path
 
+make clean
 make build
 
 for i in $(seq 1 $iterations);
