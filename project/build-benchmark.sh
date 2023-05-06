@@ -1,9 +1,12 @@
 path=$1
 iterations=$2
 
+current=$(pwd)
+
 cd $path
 
 total=0
+values=()
 
 for i in $(seq 1 $iterations);
 do
@@ -11,6 +14,10 @@ do
     start=`date +%s.%N`
     make build
     end=`date +%s.%N`
-    total=$( echo "$total + $end - $start" | bc -l )
+    time=$( echo "$end - $start" | bc -l )
+    values+=("'$time'")
+    total=$( echo "$total + $time" | bc -l )
 done
+cd $current
+printf '%s\n' $values > ./build-results/test.txt
 echo $total / $iterations | bc -l
