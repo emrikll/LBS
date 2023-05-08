@@ -25,4 +25,4 @@
 ./run-benchmark.sh ./c_prototypes/print-200 200 ./print-200 test
 ./run-benchmark.sh ./c_prototypes/print-500 200 ./print-500 test
 #./run-benchmark.sh ./c_prototypes/shelloverflow 200
-./run-benchmark.sh ./c_prototypes/addhostalias 200 ./addhostlias test test test
+./run-benchmark.sh ./c_prototypes/addhostalias 200 ./addhostalias test test test

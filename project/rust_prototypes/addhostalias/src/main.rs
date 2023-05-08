@@ -2,7 +2,7 @@ use std::env;
 use std::io::Write;
 use std::fs::OpenOptions;
 
-const HOST_FILE: &str = "/etc/hosts";
+const HOST_FILE: &str = "./file.txt";
 
 #[allow(warnings)]
 fn add_alias(ip: &str, host: &str,  alias: &str) -> std::io::Result<()> {
@@ -27,7 +27,7 @@ fn main() -> std::io::Result<()> {
         return Ok(());
     }
 
-    for n in range (1..101) {
+    for n in (1..101) {
         add_alias(&args[1], &args[2], &args[3])?;
     }
     Ok(())
