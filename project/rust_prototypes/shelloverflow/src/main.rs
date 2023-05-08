@@ -3,6 +3,7 @@ use std::io::Write;
 use anyhow::Result;
 use std::io;
 
+#[allow(warnings)]
 fn main() {
 
     let important1 = "**IMPORTANT1**".to_string();

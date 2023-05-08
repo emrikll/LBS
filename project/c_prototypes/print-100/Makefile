@@ -1,7 +1,7 @@
 all: print
 
 print: print.c
-	gcc -g -Wall print.c -o print -lm
+	gcc -g -w print.c -o print -lm
 
 build: print
 

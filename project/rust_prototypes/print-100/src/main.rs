@@ -1,5 +1,6 @@
 use std::env;
 
+#[allow(warnings)]
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() != 2 {
@@ -8,6 +9,66 @@ fn main() {
     }
 
     let mut formatbuffer: String;
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
+    formatbuffer = format!("{}", args[1]);
 
     formatbuffer = format!("{}", args[1]);
     formatbuffer = format!("{}", args[1]);

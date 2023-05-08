@@ -1,7 +1,7 @@
 all: addhostalias
 
 addhostalias: addhostalias.c
-	gcc -g -Wall addhostalias.c -o addhostalias -lm
+	gcc -g -w addhostalias.c -o addhostalias -lm
 
 build: addhostalias
 

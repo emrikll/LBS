@@ -4,6 +4,7 @@ use std::fs::OpenOptions;
 
 const HOST_FILE: &str = "/etc/hosts";
 
+#[allow(warnings)]
 fn add_alias(ip: &str, host: &str,  alias: &str) -> std::io::Result<()> {
     let formatbuffer: String;
 
@@ -18,6 +19,7 @@ fn add_alias(ip: &str, host: &str,  alias: &str) -> std::io::Result<()> {
     Ok(())
 }
 
+#[allow(warnings)]
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
     if args.len() != 4 {
