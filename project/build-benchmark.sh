@@ -31,5 +31,6 @@ fi
 
 file="./build_results/${resultsfile}-${iterations}"
 touch $file
-printf '%s\n' "${values[@]}" > "$file"
+printf '0%s\n' "${values[@]}" > "$file"
+#cat $file | ts 0 | tr -d ' ' > "$file"
 echo $total / $iterations | bc -l

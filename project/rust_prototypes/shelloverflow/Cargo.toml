@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 rpassword = "0.0.4"
-anyhow = "1.0"
