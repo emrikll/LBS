@@ -14,7 +14,7 @@ void add_alias(char *ip, char *hostname, char *alias) {
   char formatbuffer[256];
   FILE *file;
  
-  sprintf(formatbuffer, "%s\t%s\t%s\n", ip, hostname, alias);
+  snprintf(formatbuffer, "%s\t%s\t%s\n", ip, hostname, alias);
  
   file = fopen(HOSTFILE, "a");
   if (file == NULL) {
