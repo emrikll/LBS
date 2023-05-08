@@ -14,6 +14,7 @@ cd $path
 
 make clean
 make build
+chmod +x $target
 
 for i in $(seq 1 $iterations);
 do

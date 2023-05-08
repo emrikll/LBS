@@ -14,27 +14,21 @@ fn main() {
 
     println!("Starting..");
 
-    while true {
-        
-        print!("user: ");
-        let mut stdin = io::stdin();
-        let input = &mut String::new();
+    print!("user: ");
+    let mut stdin = io::stdin();
+    let input = &mut String::new();
+
+    input.clear();
+    stdin.read_line(input);
+
+    let user = input.trim().to_string();
+    if user.is_empty() {
+        return;
+    }        
+
+    print!("password: ");
+    std::io::stdout().flush().unwrap();
+    let password = read_password().unwrap();
     
-        input.clear();
-        stdin.read_line(input);
-
-        let user = input.trim().to_string();
-        if user.is_empty() {
-            return;
-        }        
-
-        print!("password: ");
-        std::io::stdout().flush().unwrap();
-        let password = read_password().unwrap();
-        
-        println!("Your password was {}", password);
-    }
-        
-
-    println!("Hello, world!");
+    println!("Your password was {}", password);
 }

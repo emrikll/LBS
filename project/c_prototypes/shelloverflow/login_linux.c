@@ -43,29 +43,29 @@ int main(int argc, char *argv[]) {
 
 	sighandler();
 
-	while (TRUE) {
-		printf("login: ");
-		fflush(NULL); /* Flush all  output buffers */
-		__fpurge(stdin); /* Purge any data in stdin buffer */
+	
+	printf("login: ");
+	fflush(NULL); /* Flush all  output buffers */
+	__fpurge(stdin); /* Purge any data in stdin buffer */
 
-		//Use fgets instead of gets
-		if(fgets(user, LENGTH, stdin) == NULL){  
-			exit(0); 
-		}
-
-		//To prevent buffer overflow, we replace the enter key with end string
-		for(int i = 0 ; i < LENGTH ; i++){		
-			if(user[i] == '\n'){
-				user[i] = '\0';
-			}
-		}
-
-		if(user == NULL) {
-			exit(0);
-		}
-
-		user_pass = getpass(prompt);
-		printf("Your password was %s\n", user_pass);
+	//Use fgets instead of gets
+	if(fgets(user, LENGTH, stdin) == NULL){  
+		exit(0); 
 	}
+
+	//To prevent buffer overflow, we replace the enter key with end string
+	for(int i = 0 ; i < LENGTH ; i++){		
+		if(user[i] == '\n'){
+			user[i] = '\0';
+		}
+	}
+
+	if(user == NULL) {
+		exit(0);
+	}
+
+	user_pass = getpass(prompt);
+	printf("Your password was %s\n", user_pass);
+	
 	return 0;
 }
