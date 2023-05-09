@@ -39,12 +39,9 @@ int main(int argc, char *argv[]) {
 
 	//char   *c_pass; //you might want to use this variable later...
 	char prompt[] = "password: ";
-	char *user_pass;
-
-	sighandler();
-
+	char user_pass[LENGTH];
 	
-	printf("login: ");
+	printf("user: ");
 	fflush(NULL); /* Flush all  output buffers */
 	__fpurge(stdin); /* Purge any data in stdin buffer */
 
@@ -64,7 +61,25 @@ int main(int argc, char *argv[]) {
 		exit(0);
 	}
 
-	user_pass = getpass(prompt);
+	printf("password: ");
+	fflush(NULL); /* Flush all  output buffers */
+	__fpurge(stdin); /* Purge any data in stdin buffer */
+
+	//Use fgets instead of gets
+	if(fgets(user_pass, LENGTH, stdin) == NULL){  
+		exit(0); 
+	}
+
+	//To prevent buffer overflow, we replace the enter key with end string
+	for(int i = 0 ; i < LENGTH ; i++){		
+		if(user_pass[i] == '\n'){
+			user_pass[i] = '\0';
+		}
+	}
+
+	if(user_pass == NULL) {
+		exit(0);
+	}
 	printf("Your password was %s\n", user_pass);
 	
 	return 0;

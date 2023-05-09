@@ -1,6 +1,3 @@
-use rpassword::read_password;
-use std::io::Write;
-use anyhow::Result;
 use std::io;
 
 #[allow(warnings)]
@@ -14,7 +11,7 @@ fn main() {
 
     println!("Starting..");
 
-    print!("user: ");
+    println!("user: ");
     let mut stdin = io::stdin();
     let input = &mut String::new();
 
@@ -24,11 +21,13 @@ fn main() {
     let user = input.trim().to_string();
     if user.is_empty() {
         return;
-    }        
+    } 
 
-    print!("password: ");
-    std::io::stdout().flush().unwrap();
-    let password = read_password().unwrap();
+    println!("password: ");
+    input.clear();
+    stdin.read_line(input); 
+
+    let password = input.trim().to_string();  
     
     println!("Your password was {}", password);
 }
