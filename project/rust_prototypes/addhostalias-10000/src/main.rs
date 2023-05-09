@@ -27,7 +27,7 @@ fn main() -> std::io::Result<()> {
         return Ok(());
     }
 
-    for n in (1..101) {
+    for n in (1..10001) {
         add_alias(&args[1], &args[2], &args[3])?;
     }
     Ok(())
